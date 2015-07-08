@@ -1,0 +1,1 @@
+add_library(pamir p4est-inplace-algorithms.c  triangulation-queries.c)

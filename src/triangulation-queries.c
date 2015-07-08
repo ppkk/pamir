@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "p4est-fempar-interface.h"
+#include "pamir.h"
 
 #define NUM_NEIGHBOURING_VERTICES 2
 #define DOES_NOT_EXIST -1

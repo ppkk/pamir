@@ -15,7 +15,7 @@
 #include <p8est_ghost.h>
 #endif
 
-#include "p4est-fempar-interface.h"
+#include "pamir.h"
 
 /***************************************************************************************************/
 /***************************************************************************************************/
@@ -418,11 +418,11 @@ void create_ghost_data(p4est_wrapper_t* p4estw)
 //           inteface to Fempar:
 /********************************************************************************************/
 
-p4est_wrapper_t* p4estw_create(int fortran_mpicomm)
+p4est_wrapper_t* p4estw_create(sc_MPI_Comm mpicomm)
 {
   p4est_connectivity_t *conn;
   p4est_wrapper_t *p4estw = malloc(sizeof(p4est_wrapper_t));
-  sc_MPI_Comm mpicomm = MPI_Comm_f2c(fortran_mpicomm);
+  //sc_MPI_Comm mpicomm = MPI_Comm_f2c(fortran_mpicomm);
 
   printf("*********** creating p4est\n");
   conn = p4est_connectivity_new_unitsquare ();

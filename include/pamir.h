@@ -55,7 +55,7 @@ typedef struct p4est_wrapper
 p4est_wrapper_t;
 
 
-p4est_wrapper_t* p4estw_create(int fortran_mpicomm);
+p4est_wrapper_t* p4estw_create(MPI_Comm mpicomm);
 p4est_wrapper_t* p4estw_create_from_geometry(int num_elements, int num_points, int* list_nodes, double coordinates[][NUM_DIMS], int fortran_mpicomm);
 int p4estw_refine_all(p4est_wrapper_t* p4estw);
 int p4estw_refine_selected(p4est_wrapper_t* p4estw, int what_refine_size, int* what_refine);
